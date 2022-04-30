@@ -20,17 +20,16 @@ struct ImagePicker : UIViewControllerRepresentable {
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
         picker.sourceType = sourceType
-        picker.allowsEditing = true
+        picker.allowsEditing = true // 이거를 해줬기 때문에 사진 수정후 올리는게 가능해진다.
         return picker
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
     }
     
     func makeCoordinator() -> Coordinator {
         return Coordinator(parent: self)
-    }
+    } // 델리게이트 패턴을 수행하는 클래스 연결 구간이다.
     
     class Coordinator : NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         

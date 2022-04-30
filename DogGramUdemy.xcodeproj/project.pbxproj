@@ -26,6 +26,7 @@
 		79AAA9FC281DCA9300AB3CB4 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA9FB281DCA9300AB3CB4 /* ImageGridView.swift */; };
 		79AAA9FE281DCF3A00AB3CB4 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA9FD281DCF3A00AB3CB4 /* UploadView.swift */; };
 		79AAAA00281DD11D00AB3CB4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA9FF281DD11D00AB3CB4 /* ImagePicker.swift */; };
+		79AAAA02281DD53100AB3CB4 /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AAAA01281DD53100AB3CB4 /* PostImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		79AAA9FB281DCA9300AB3CB4 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 		79AAA9FD281DCF3A00AB3CB4 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 		79AAA9FF281DD11D00AB3CB4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		79AAAA01281DD53100AB3CB4 /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				79AAA9EF281DA48200AB3CB4 /* CommentsView.swift */,
 				79AAA9F7281DA92900AB3CB4 /* BrowseView.swift */,
 				79AAA9FD281DCF3A00AB3CB4 /* UploadView.swift */,
+				79AAAA01281DD53100AB3CB4 /* PostImageView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				79AAA9E8281D9EE400AB3CB4 /* PostView.swift in Sources */,
 				79AAAA00281DD11D00AB3CB4 /* ImagePicker.swift in Sources */,
 				79AAA9F0281DA48200AB3CB4 /* CommentsView.swift in Sources */,
+				79AAAA02281DD53100AB3CB4 /* PostImageView.swift in Sources */,
 				79AAA9E4281D9D9200AB3CB4 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +382,8 @@
 				DEVELOPMENT_TEAM = SRJSV34WBB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera at the user's request to take a photo.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This allows the app to access to the photo library to import or save the photo as user's request";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,6 +414,8 @@
 				DEVELOPMENT_TEAM = SRJSV34WBB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera at the user's request to take a photo.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This allows the app to access to the photo library to import or save the photo as user's request";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
