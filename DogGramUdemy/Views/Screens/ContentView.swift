@@ -8,30 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var currentUserID : String?
+    
     var body: some View {
-        TabView {
-            FeedView()
-                .tabItem {
-                    Image(systemName: "book.fill")
-                    Text("Feed")
+        NavigationView {
+            TabView {
+                FeedView()
+                    .tabItem {
+                        Image(systemName: "book.fill")
+                        Text("Feed")
+                    }
+                BrowseView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Browse")
+                    }
+                UploadView()
+                    .tabItem {
+                        Image(systemName: "square.and.arrow.up.fill")
+                        Text("Upload")
+                    }
+                ZStack{
+                    if currentUserID != nil {
+                        ProfileView(profileDisplayName: "My profile", profileUserID: "id", isMyProfile: false)
+                    } else {
+                        SignUpView()
+                    }
+                    
                 }
-            BrowseView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Browse")
-                }
-            UploadView()
-                .tabItem {
-                    Image(systemName: "square.and.arrow.up.fill")
-                    Text("Upload")
-                }
-            Text("SC4")
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
+                
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("Profile")
+                    }
+            }
+            .accentColor(Color.colorPurple)
+            .background(.gray)
         }
-        .accentColor(Color.colorPurple)
     }
 }
 

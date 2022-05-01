@@ -14,26 +14,30 @@ struct PostView: View {
     
     var body: some View {
         VStack(alignment : .center, spacing: 0) {
-            
+             
             if showHeaderAndHeader {
-                HStack {
-                    Image("dog1")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width : 30, height : 30, alignment: .center)
-                        .cornerRadius(15)
-                    
-                    Text(post.userName)
-                        .font(.callout)
-                        .fontWeight(.medium)
-                        .foregroundColor(.primary)
-                    
-                    Spacer()
-                    
-                    Image(systemName: "ellipsis")
-                        .font(.headline)
-                }
-                .padding(.all, 6)
+                NavigationLink(destination: {
+                    ProfileView(profileDisplayName: post.userName, profileUserID: post.userID, isMyProfile: true)
+                }, label: {
+                    HStack {
+                        Image("dog1")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width : 30, height : 30, alignment: .center)
+                            .cornerRadius(15)
+                        
+                        Text(post.userName)
+                            .font(.callout)
+                            .fontWeight(.medium)
+                            .foregroundColor(.primary)
+                        
+                        Spacer()
+                        
+                        Image(systemName: "ellipsis")
+                            .font(.headline)
+                    }
+                    .padding(.all, 6)
+                })
             }
             
             

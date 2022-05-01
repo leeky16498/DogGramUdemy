@@ -12,7 +12,6 @@ struct FeedView: View {
     @StateObject var vm = PostViewModel()
     
     var body: some View {
-        NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack {
                     ForEach(vm.postArray) { post in
@@ -22,7 +21,6 @@ struct FeedView: View {
             }
         .navigationTitle("FEED VIEW")
         .navigationBarTitleDisplayMode(.inline)
-        }
     }
 }
 
